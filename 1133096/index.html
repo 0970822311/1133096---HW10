@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>1133096 - HW10</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <h1>Othello / Reversi</h1>
+
+    <section class="controls">
+      <div class="status">
+        輪到：
+        <span id="currentPlayer">黑</span>
+      </div>
+
+      <div class="score">
+        黑：
+        <span id="blackScore">2</span>
+        白：
+        <span id="whiteScore">2</span>
+      </div>
+
+      <!-- 【新增】AI 棋力下拉選單 -->
+      <label>
+        AI 棋力：
+        <select id="aiLevelSelect">
+          <option value="basic">基本</option>
+          <option value="advanced">進階</option>
+        </select>
+      </label>
+
+      <button id="restartBtn">重新開始</button>
+    </section>
+
+    <section class="board-wrap">
+      <div
+        id="board"
+        class="board"
+        aria-label="Othello 棋盤"
+        role="grid">
+      </div>
+    </section>
+
+    <!-- 【修正】這裡原本是中文引號，已改成英文 -->
+    <section class="legend">
+      <p>
+        提示：綠色格子為可下的位置；
+        右下角數字顯示該位置下子後可翻轉數量。
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
